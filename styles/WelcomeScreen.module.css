@@ -1,0 +1,55 @@
+.remove {
+  opacity: 0;
+  filter: blur(0px);
+}
+
+.container {
+  position: fixed;
+  background-color: rgb(10, 10, 10);
+  z-index: 999;
+  filter: blur(0px);
+  width: 100% !important;
+  height: 100% !important;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transition: all 0.4s ease-out;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 60%;
+  padding: 8rem 4rem;
+  text-align: center;
+  z-index: 1000;
+  transition: all 0.6s ease-out;
+}
+
+.text h3 {
+  color: white;
+  font-size: 18px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+@keyframes fadein-out {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
