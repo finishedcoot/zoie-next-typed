@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../../styles/WelcomeScreen.module.css";
 
-const WelcomeScreen = () => {
+const WelcomeScreen: React.FC = () => {
   // Removing welcome screen
   const [removeWelcomeScreen, setRemoveWelcomeScreen] = useState(false);
 
