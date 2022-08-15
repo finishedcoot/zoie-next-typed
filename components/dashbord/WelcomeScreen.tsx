@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "../../styles/WelcomeScreen.module.css";
+import styles from "../../styles/WelcomeScreen.module.scss";
 
 const WelcomeScreen: React.FC = () => {
   // Removing welcome screen

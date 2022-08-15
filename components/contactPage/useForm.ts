@@ -1,6 +1,13 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
-const useForm = (callback, validate) => {
+const useForm = (
+  callback: () => void,
+  validate: (values: {
+    name: string;
+    email: string;
+    message: string;
+  }) => boolean
+) => {
   const [values, setValues] = useState({
     name: "",
     email: "",
@@ -9,7 +16,7 @@ const useForm = (callback, validate) => {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setValues({
       ...values,
@@ -17,7 +24,7 @@ const useForm = (callback, validate) => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
 
     setErrors(validate(values));

@@ -5,22 +5,22 @@ import Image from "next/image";
 import DashbordSlider from "../components/dashbord/DashbordSlider";
 import WelcomeScreen from "../components/dashbord/WelcomeScreen";
 
-const Home: NextPage = () => {
-  const [firstVisit, setFirstVisit] = useState(false);
-  const [nav, setNav] = useState(false);
+const Home: NextPage<{ firstVisit: boolean }> = ({ firstVisit }) => {
+  // const [firstVisit, setFirstVisit] = useState(false);
+  // const [nav, setNav] = useState(false);
 
-  useEffect(() => {
-    const userFirstVisit = sessionStorage.getItem("Has_visited");
+  // useEffect(() => {
+  //   const userFirstVisit = sessionStorage.getItem("Has_visited");
 
-    if (userFirstVisit !== "True") {
-      console.log("use effect loop");
-      setFirstVisit(true);
-      sessionStorage.setItem("Has_visited", "True");
-    }
-    setTimeout(() => {
-      setFirstVisit(false);
-    }, 4000);
-  }, []);
+  //   if (userFirstVisit !== "True") {
+  //     console.log("use effect loop");
+  //     setFirstVisit(true);
+  //     sessionStorage.setItem("Has_visited", "True");
+  //   }
+  //   setTimeout(() => {
+  //     setFirstVisit(false);
+  //   }, 4000);
+  // }, []);
 
   return (
     <div>

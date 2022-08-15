@@ -35,6 +35,7 @@ const DashbordSlider: React.FC = (props) => {
         (slide) =>
           slide.active && (
             <DashbordSlide
+              key={slide.title}
               imageSrc={slide.imageSrc}
               title={slide.title}
               active={slide.active}
