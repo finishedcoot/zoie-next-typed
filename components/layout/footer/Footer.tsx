@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
       <div className={styles.social_media}>
         <a
           className={styles.footer_links}
-          href={"Twitter.com/alizoie"}
+          href={"https://Twitter.com/alizoie"}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
         </a>
         <a
           className={styles.footer_links}
-          href={"Instagram.com/mazoie"}
+          href={"https://Instagram.com/mazoie"}
           target="_blank"
           rel="noopener noreferrer"
         >

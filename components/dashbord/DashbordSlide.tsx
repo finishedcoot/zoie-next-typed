@@ -10,7 +10,11 @@ const DashbordSlide: React.FC<{
   active: boolean;
 }> = ({ imageSrc, title, active }) => {
   return (
-    <div className="container relative">
+    <div
+      className={`container relative ${Styles.slideContainer} ${
+        active && Styles.active
+      }`}
+    >
       <Image
         layout="fill"
         src={imageSrc}

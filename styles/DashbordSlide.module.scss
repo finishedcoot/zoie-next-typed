@@ -1,3 +1,13 @@
+.slideContainer {
+  opacity: 0;
+  z-index: -1;
+  transition: 1s ease-in-out all;
+  position: absolute;
+  &.active {
+    opacity: 1;
+    z-index: 1;
+  }
+}
 .title {
   font-family: "Roboto", sans-serif;
   font-size: 3rem;

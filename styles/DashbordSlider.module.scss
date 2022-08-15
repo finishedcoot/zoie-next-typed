@@ -1,0 +1,68 @@
+.sliderContainer {
+  position: relative;
+  &:hover .arrowButton {
+    opacity: 0.5;
+  }
+  &:hover .dot {
+    opacity: 1;
+  }
+}
+.arrowButton {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  z-index: 5;
+  border: none;
+  top: 50%;
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  background-image: url(/left-arrow.svg);
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+  &.rightArrow {
+    right: 1% !important;
+    transform: rotate(180deg);
+  }
+  &.leftArrow {
+    left: 1% !important;
+  }
+
+  .arrow {
+    border-radius: 50%;
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: 1 !important;
+  }
+}
+
+.dotsContainer {
+  position: absolute;
+  bottom: 1rem;
+  height: 3rem;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  .dot {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.567);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.807);
+    }
+    &.activeDot {
+      background-color: black;
+    }
+  }
+}
