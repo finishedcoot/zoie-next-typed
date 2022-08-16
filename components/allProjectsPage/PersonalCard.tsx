@@ -3,7 +3,7 @@ import { StaticImageData } from "next/image";
 import Image from "next/image";
 import styles from "../../styles/PersonalCard.module.scss";
 import Link from "next/link";
-import { shimmer, toBase64 } from "../utils/imagePlaceholder";
+import { shimmer, toBase64 } from "../utils/imageUtils";
 
 const PersonalCards: React.FC<{
   index: number;
@@ -21,7 +21,7 @@ const PersonalCards: React.FC<{
         position: "relative",
       }}
     >
-      <Link href={`/Projects/${title}`}>
+      <Link href={`/projects/${title}`}>
         <div className={styles.modalContainer}>
           <h1 className={styles.title}>{title}</h1>
         </div>

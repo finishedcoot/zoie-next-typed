@@ -27,7 +27,7 @@ const Home: NextPage<{ firstVisit: boolean; slides: DashbordSlidesType[] }> = ({
 
 export default Home;
 
-export const getStaticProps: GetStaticProps = (context) => {
+export const getStaticProps: GetStaticProps = async (context) => {
   const slides: DashbordSlidesType[] = [
     { id: 1, title: "QISHM", imageSrc: qishm },
     {

@@ -3,7 +3,7 @@ import type { NextPage, GetStaticProps } from "next";
 import data from "../../data/contents.json";
 import Styles from "../../styles/Projects.module.scss";
 import dynamic from "next/dynamic";
-import { ProjectsPageSlides } from "../../types/types";
+import { ProjectsTypes } from "../../types/types";
 const PersonalSlide = dynamic(
   () => import("../../components/allProjectsPage/PersonalSlider"),
   {
@@ -17,7 +17,7 @@ const WorksSlide = dynamic(
   }
 );
 
-const index: NextPage<{ data: ProjectsPageSlides[] }> = ({ data }) => {
+const index: NextPage<{ data: ProjectsTypes[] }> = ({ data }) => {
   return (
     <div>
       <div className={Styles.container}>
@@ -52,7 +52,7 @@ const index: NextPage<{ data: ProjectsPageSlides[] }> = ({ data }) => {
 
 export default index;
 
-export const getStaticProps: GetStaticProps = (context) => {
+export const getStaticProps: GetStaticProps = async (context) => {
   return {
     props: {
       data,

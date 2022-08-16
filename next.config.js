@@ -6,6 +6,7 @@ const nextConfig = {
     domains: [
       "personal-galleries.s3.amazonaws.com",
       "works-galleries.s3.amazonaws.com",
+      "alizoie.com",
     ],
   },
 };

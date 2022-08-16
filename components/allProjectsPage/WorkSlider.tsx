@@ -1,19 +1,19 @@
 import React from "react";
 import styles from "../../styles/WorksSlider.module.scss";
-import { ProjectsPageSlides } from "../../types/types";
+import { ProjectsTypes } from "../../types/types";
 
 import WorksCard from "./WorksCard";
 import CustomSlider from "../utils/CustomSlider";
 
 import data from "../../data/contents.json";
 
-const WorksSlider: React.FC<{ data: ProjectsPageSlides[] }> = () => {
-  const fashionProjects: ProjectsPageSlides[] = [];
-  const commercialProjects: ProjectsPageSlides[] = [];
-  const advertismentProjects: ProjectsPageSlides[] = [];
-  const interiorAndBuildingsProjects: ProjectsPageSlides[] = [];
-  const realEstateProjects: ProjectsPageSlides[] = [];
-  const weddingProjects: ProjectsPageSlides[] = [];
+const WorksSlider: React.FC<{ data: ProjectsTypes[] }> = () => {
+  const fashionProjects: ProjectsTypes[] = [];
+  const commercialProjects: ProjectsTypes[] = [];
+  const advertismentProjects: ProjectsTypes[] = [];
+  const interiorAndBuildingsProjects: ProjectsTypes[] = [];
+  const realEstateProjects: ProjectsTypes[] = [];
+  const weddingProjects: ProjectsTypes[] = [];
 
   data.forEach((element) => {
     switch (element.subject) {

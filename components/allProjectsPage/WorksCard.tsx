@@ -3,7 +3,7 @@ import styles from "../../styles/WorksCard.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 import { StaticImageData } from "next/image";
-import { shimmer, toBase64 } from "../utils/imagePlaceholder";
+import { shimmer, toBase64 } from "../utils/imageUtils";
 
 const ProjectsCard: React.FC<{
   index: number;
@@ -24,7 +24,7 @@ const ProjectsCard: React.FC<{
         marginLeft: `${index === 0 ? 0 : ""}`,
       }}
     >
-      <Link href={`/Projects/${title}`}>
+      <Link href={`/projects/${title}`}>
         <div className={styles.modalContainer}>
           <h1 className={longTitle === true ? styles.longtitle : styles.title}>
             {cleanTitle}

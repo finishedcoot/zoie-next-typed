@@ -6,7 +6,7 @@ export type DashbordSlidesType = {
   imageSrc: StaticImageData;
 };
 
-export type ProjectsPageSlides = {
+export type ProjectsTypes = {
   id: number;
   type: string;
   title: string;
@@ -15,6 +15,6 @@ export type ProjectsPageSlides = {
   img: StaticImageData[] | string[];
   videocover: StaticImageData[] | string[] | null;
   coverPostion: string;
-  video: string[] | boolean;
+  video: string[];
   longTitle?: boolean | undefined;
 };
