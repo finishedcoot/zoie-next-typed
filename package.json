@@ -6,15 +6,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export"
   },
   "dependencies": {
-    "framer-motion": "^7.0.1",
+    "framer-motion": "^7.2.0",
     "next": "12.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-player": "^2.10.1",
-    "sass": "^1.54.4"
+    "sass": "^1.54.4",
+    "sharp": "^0.30.7"
   },
   "devDependencies": {
     "@types/node": "18.6.4",

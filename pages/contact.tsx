@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import type { NextPage } from "next";
+
 import Head from "next/head";
 import validate from "../formUtils/validate";
 import useForm from "../formUtils/useForm";
 import contactStyle from "../styles/Contact.module.scss";
 
-const contact: React.FC = () => {
+const Contact: NextPage = () => {
   const [emailV, setEmailV] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [resultmessage, setResultMessage] = useState<{
@@ -131,4 +133,4 @@ const contact: React.FC = () => {
   );
 };
 
-export default contact;
+export default Contact;

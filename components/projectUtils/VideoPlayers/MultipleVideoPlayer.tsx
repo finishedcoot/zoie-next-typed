@@ -21,38 +21,42 @@ const MultipleVideoPlayer: React.FC<{
   return (
     <div className={style.container}>
       <div className={style.first_container}>
-        <div className={style.video_container}>
-          <Image className={style.header} src={cover[0]} alt={title} />
-        </div>
         <div className={style.info_container}>
           <p>{info1}</p>
           <h1>{title}</h1>
           <p>{info2}</p>
         </div>
       </div>
-      {video.map((vid, id) => {
-        return (
-          <div
-            className={
-              id % 2 === 0 ? style.even_container : style.odd_container
-            }
-          >
-            <div className={style.videos}>
-              {hashWindow && (
-                <ReactPlayer
-                  controls
-                  className={style.player}
-                  width="100%"
-                  height="100%"
-                  url={vid}
-                  light={cover[id] as string}
-                />
-              )}
+      {hashWindow && video.length === 1 ? (
+        <div className={style.video_container}>
+          <ReactPlayer
+            controls
+            width="100%"
+            height="100%"
+            url={video[0]}
+            light={cover[0] as string}
+          />
+        </div>
+      ) : (
+        video.map((vid, id) => {
+          return (
+            <div key={id} className={style.even_container}>
+              <div className={style.videos}>
+                {hashWindow && (
+                  <ReactPlayer
+                    controls
+                    className={style.player}
+                    width="100%"
+                    height="100%"
+                    url={vid}
+                    light={cover[id] as string}
+                  />
+                )}
+              </div>
             </div>
-            {/* <h1 className={style.titels}>{props.vidtitle[id]}</h1> */}
-          </div>
-        );
-      })}
+          );
+        })
+      )}
     </div>
   );
 };

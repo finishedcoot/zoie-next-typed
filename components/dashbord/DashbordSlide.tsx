@@ -9,6 +9,7 @@ const DashbordSlide: React.FC<{
   title: string;
   active: boolean;
 }> = ({ imageSrc, title, active }) => {
+  console.log(title);
   return (
     <div
       className={`container relative ${Styles.slideContainer} ${
@@ -23,8 +24,8 @@ const DashbordSlide: React.FC<{
         quality={100}
       />
       <h1 className={Styles.title}>
-        <Link href={"/Projects/QISHM"}>
-          <span>{title}</span>
+        <Link href={`/projects/${title}`}>
+          <span>{title.replaceAll("_", " ")}</span>
         </Link>
       </h1>
     </div>

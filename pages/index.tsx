@@ -36,7 +36,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     { id: 1, title: "QISHM", imageSrc: qishm },
     {
       id: 2,
-      title: "BELLE DE JOUR",
+      title: "BELLE_DE_JOUR",
       imageSrc: belleDeJour,
     },
     {

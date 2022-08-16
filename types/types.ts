@@ -15,6 +15,6 @@ export type ProjectsTypes = {
   img: StaticImageData[] | string[];
   videocover: StaticImageData[] | string[] | null;
   coverPostion: string;
-  video: string[];
+  video: string[] | any;
   longTitle?: boolean | undefined;
 };

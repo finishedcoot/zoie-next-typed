@@ -1,8 +1,10 @@
 import React from "react";
 import Head from "next/head";
+import type { NextPage } from "next";
+
 import style from "../styles/AboutPage.module.scss";
 
-const about = () => {
+const About: NextPage = () => {
   return (
     <div>
       <Head>
@@ -19,4 +21,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;
