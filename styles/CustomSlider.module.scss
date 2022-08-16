@@ -1,0 +1,155 @@
+.container {
+  width: 100vw;
+  margin: 0 auto;
+  position: relative;
+  &:hover .arrowButton {
+    opacity: 0.5;
+  }
+}
+.singleCard {
+  --_spacer: 10px;
+  width: 100vw;
+  display: grid;
+  gap: 50px;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  padding: 10px 100px;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.singleCard::-webkit-scrollbar {
+  display: none;
+}
+.arrowButton {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  z-index: 5;
+  border: none;
+  top: 50%;
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  background-image: url(/left-arrow.svg);
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+  &.rightArrow {
+    right: 4.2% !important;
+    transform: rotate(180deg);
+  }
+  &.leftArrow {
+    left: 4.2% !important;
+  }
+
+  .arrow {
+    border-radius: 50%;
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: 1 !important;
+  }
+}
+
+.multipleCard {
+  --_spacer: 10px;
+  width: 100vw;
+  display: grid;
+  gap: 5px;
+  grid-auto-flow: column;
+  grid-auto-columns: 20%;
+  padding: 10px 10px;
+  position: relative;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.multipleCard::-webkit-scrollbar {
+  display: none;
+}
+
+.unfilledSlider {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1025px) {
+  .singleCard {
+    gap: 40px;
+  }
+  .multipleCard {
+    grid-auto-columns: 32%;
+  }
+}
+
+@media (max-width: 721px) {
+  .singleCard {
+    gap: 30px;
+  }
+  .multipleCard {
+    grid-auto-columns: 42%;
+  }
+}
+@media (max-width: 426px) {
+  .multipleCard {
+    grid-auto-columns: 70%;
+  }
+  .unfilledSlider {
+    --_spacer: 10px;
+    width: 100vw;
+    display: grid;
+    gap: 5px;
+    grid-auto-flow: column;
+    grid-auto-columns: 70%;
+    padding: 10px 10px;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+@media (max-width: 1210px) {
+  .rightArrow {
+    right: 6%;
+  }
+  .leftArrow {
+    left: 6%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .rightArrow {
+    right: 7.5%;
+  }
+  .leftArrow {
+    left: 7.5%;
+  }
+}
+@media (max-width: 765px) {
+  .rightArrow {
+    right: 10%;
+  }
+  .leftArrow {
+    left: 10%;
+  }
+}
+
+@media (max-width: 700px) {
+  .rightArrow {
+    display: none;
+  }
+  .leftArrow {
+    display: none;
+  }
+}

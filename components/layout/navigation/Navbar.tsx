@@ -28,9 +28,9 @@ const Navbar: React.FC<{
             <li>
               <Link
                 className={`${styles.nav} ${
-                  location.pathname === "/Projects" ? styles.active : ""
+                  location.pathname === "/projects" ? styles.active : ""
                 }`}
-                href="/Projects"
+                href="/projects"
               >
                 Projects
               </Link>

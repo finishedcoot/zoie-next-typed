@@ -1,0 +1,21 @@
+.title {
+  color: rgba(238, 131, 44, 0.671);
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  margin-top: 4rem;
+  margin-left: 2rem;
+  margin-bottom: -2rem;
+  font-weight: 600;
+}
+.container {
+  position: relative;
+  margin-bottom: 5rem;
+  padding-top: 2.5rem;
+}
+@media (min-width: 768px) {
+  .title {
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+  }
+}

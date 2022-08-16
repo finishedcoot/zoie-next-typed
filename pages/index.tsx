@@ -1,27 +1,17 @@
-import { useEffect, useState } from "react";
-import type { NextPage } from "next";
+import type { NextPage, GetStaticProps } from "next";
 import Head from "next/head";
-import Image from "next/image";
+import qishm from "../public/dashbord/1.jpg";
+import belleDeJour from "../public/dashbord/2.jpg";
+import kan from "../public/dashbord/3.jpg";
+import avina from "../public/dashbord/4.jpg";
 import DashbordSlider from "../components/dashbord/DashbordSlider";
 import WelcomeScreen from "../components/dashbord/WelcomeScreen";
+import { DashbordSlidesType } from "../types/types";
 
-const Home: NextPage<{ firstVisit: boolean }> = ({ firstVisit }) => {
-  // const [firstVisit, setFirstVisit] = useState(false);
-  // const [nav, setNav] = useState(false);
-
-  // useEffect(() => {
-  //   const userFirstVisit = sessionStorage.getItem("Has_visited");
-
-  //   if (userFirstVisit !== "True") {
-  //     console.log("use effect loop");
-  //     setFirstVisit(true);
-  //     sessionStorage.setItem("Has_visited", "True");
-  //   }
-  //   setTimeout(() => {
-  //     setFirstVisit(false);
-  //   }, 4000);
-  // }, []);
-
+const Home: NextPage<{ firstVisit: boolean; slides: DashbordSlidesType[] }> = ({
+  firstVisit,
+  slides,
+}) => {
   return (
     <div>
       <Head>
@@ -30,9 +20,35 @@ const Home: NextPage<{ firstVisit: boolean }> = ({ firstVisit }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {firstVisit && <WelcomeScreen />}
-      <DashbordSlider />
+      <DashbordSlider Slides={slides} />
     </div>
   );
 };
 
 export default Home;
+
+export const getStaticProps: GetStaticProps = (context) => {
+  const slides: DashbordSlidesType[] = [
+    { id: 1, title: "QISHM", imageSrc: qishm },
+    {
+      id: 2,
+      title: "BELLE DE JOUR",
+      imageSrc: belleDeJour,
+    },
+    {
+      id: 3,
+      title: "KAN",
+      imageSrc: kan,
+    },
+    {
+      id: 4,
+      title: "AVINA",
+      imageSrc: avina,
+    },
+  ];
+  return {
+    props: {
+      slides,
+    },
+  };
+};

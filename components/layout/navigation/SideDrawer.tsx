@@ -25,7 +25,7 @@ const SideDrawer: React.FC<{
             </Link>
           </li>
           <li>
-            <Link className={styles.side_drawer_links} href="/Projects">
+            <Link className={styles.side_drawer_links} href="/projects">
               Projects
             </Link>
           </li>
