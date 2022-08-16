@@ -3,7 +3,7 @@ import { StaticImageData } from "next/image";
 export type DashbordSlidesType = {
   id: number;
   title: string;
-  imageSrc: StaticImageData;
+  imageSrc: StaticImageData | string;
 };
 
 export type ProjectsTypes = {

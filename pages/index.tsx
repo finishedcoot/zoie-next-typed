@@ -1,9 +1,5 @@
 import type { NextPage, GetStaticProps } from "next";
 import Head from "next/head";
-import qishm from "../public/dashbord/1.jpg";
-import belleDeJour from "../public/dashbord/2.jpg";
-import kan from "../public/dashbord/3.jpg";
-import avina from "../public/dashbord/4.jpg";
 import DashbordSlider from "../components/dashbord/DashbordSlider";
 import WelcomeScreen from "../components/dashbord/WelcomeScreen";
 import { DashbordSlidesType } from "../types/types";
@@ -33,21 +29,21 @@ export default Home;
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const slides: DashbordSlidesType[] = [
-    { id: 1, title: "QISHM", imageSrc: qishm },
+    { id: 1, title: "QISHM", imageSrc: "/dashbord/1.jpg" },
     {
       id: 2,
       title: "BELLE_DE_JOUR",
-      imageSrc: belleDeJour,
+      imageSrc: "/dashbord/2.jpg",
     },
     {
       id: 3,
       title: "KAN",
-      imageSrc: kan,
+      imageSrc: "/dashbord/3.jpg",
     },
     {
       id: 4,
       title: "AVINA",
-      imageSrc: avina,
+      imageSrc: "/dashbord/4.jpg",
     },
   ];
   return {
