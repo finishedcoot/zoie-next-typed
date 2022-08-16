@@ -2,9 +2,9 @@ import React from "react";
 import PersonalCards from "./PersonalCard";
 import CustomSlider from "../utils/CustomSlider";
 import style from "../../styles/PersonalSlider.module.scss";
-import { ProjectsSlidesType } from "../../types/types";
+import { ProjectsPageSlides } from "../../types/types";
 
-const PersonalSlide: React.FC<{ data: ProjectsSlidesType[] }> = ({ data }) => {
+const PersonalSlide: React.FC<{ data: ProjectsPageSlides[] }> = ({ data }) => {
   return (
     <div className={style.container}>
       <h2 className={style.title}>PERSONAL</h2>

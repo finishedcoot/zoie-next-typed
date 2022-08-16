@@ -3,11 +3,12 @@ import { StaticImageData } from "next/image";
 import Image from "next/image";
 import styles from "../../styles/PersonalCard.module.scss";
 import Link from "next/link";
+import { shimmer, toBase64 } from "../utils/imagePlaceholder";
 
 const PersonalCards: React.FC<{
   index: number;
   title: string;
-  imgSrc: StaticImageData;
+  imgSrc: StaticImageData | string;
   position: string | null;
 }> = ({ index, title, imgSrc, position }) => {
   return (
@@ -26,9 +27,9 @@ const PersonalCards: React.FC<{
         </div>
       </Link>
       <Image
+        placeholder="blur"
+        blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
         alt={title}
-        width={"100%"}
-        height={"100%"}
         layout={"fill"}
         quality={100}
         className={styles.img}

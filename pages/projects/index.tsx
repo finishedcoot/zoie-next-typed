@@ -3,15 +3,21 @@ import type { NextPage, GetStaticProps } from "next";
 import data from "../../data/contents.json";
 import Styles from "../../styles/Projects.module.scss";
 import dynamic from "next/dynamic";
-import { ProjectsSlidesType } from "../../types/types";
+import { ProjectsPageSlides } from "../../types/types";
 const PersonalSlide = dynamic(
   () => import("../../components/allProjectsPage/PersonalSlider"),
   {
     suspense: true,
   }
 );
+const WorksSlide = dynamic(
+  () => import("../../components/allProjectsPage/WorkSlider"),
+  {
+    suspense: true,
+  }
+);
 
-const index: NextPage<{ data: ProjectsSlidesType[] }> = ({ data }) => {
+const index: NextPage<{ data: ProjectsPageSlides[] }> = ({ data }) => {
   return (
     <div>
       <div className={Styles.container}>
@@ -26,6 +32,18 @@ const index: NextPage<{ data: ProjectsSlidesType[] }> = ({ data }) => {
           }
         >
           <PersonalSlide data={data} />
+        </Suspense>
+        <Suspense
+          fallback={
+            <div className="lds-ring">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          }
+        >
+          <WorksSlide data={data} />
         </Suspense>
       </div>
     </div>

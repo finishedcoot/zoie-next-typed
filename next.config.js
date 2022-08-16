@@ -3,7 +3,10 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["personal-galleries.s3.amazonaws.com"],
+    domains: [
+      "personal-galleries.s3.amazonaws.com",
+      "works-galleries.s3.amazonaws.com",
+    ],
   },
 };
 

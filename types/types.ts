@@ -6,10 +6,15 @@ export type DashbordSlidesType = {
   imageSrc: StaticImageData;
 };
 
-export type ProjectsSlidesType = {
-  index: number;
+export type ProjectsPageSlides = {
+  id: number;
   type: string;
-  img: StaticImageData[];
   title: string;
-  coverPostion: string | null;
+  subject: string;
+  desc: string[];
+  img: StaticImageData[] | string[];
+  videocover: StaticImageData[] | string[] | null;
+  coverPostion: string;
+  video: string[] | boolean;
+  longTitle?: boolean | undefined;
 };

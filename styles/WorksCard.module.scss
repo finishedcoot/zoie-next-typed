@@ -1,0 +1,108 @@
+.container {
+  position: relative;
+  height: 20rem;
+  display: block;
+  flex: 0 0 18.1%;
+  z-index: 5;
+  margin-left: 35px;
+  transition: all 0.2s ease-in;
+}
+.container:hover {
+  transform: translateY(-10px);
+}
+.singleContainer {
+  position: relative;
+  width: 16rem;
+  margin: 5rem 0rem 0 2rem;
+  height: 20rem;
+  transition: all 0.2s ease-in;
+}
+.singleContainer:hover {
+  transform: translateY(-10px);
+}
+.modalContainer {
+  opacity: 0;
+  border-radius: 10px;
+  width: 100.1%;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+  background: rgb(1, 0, 15);
+  background: linear-gradient(
+    0deg,
+    rgba(1, 0, 15, 0.8746849081429446) 29%,
+    rgba(251, 251, 251, 0.36207986612613796) 100%
+  );
+  transition: opacity 0.3s ease-in;
+}
+.container:hover .modalContainer {
+  opacity: 1;
+}
+.title {
+  font-family: "Roboto", sans-serif;
+  position: absolute;
+  left: 1rem;
+  bottom: -0.5rem;
+  font-weight: 500;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  color: rgb(230, 230, 230);
+}
+
+.longtitle {
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+  font-weight: 500;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  color: rgb(230, 230, 230);
+}
+.description {
+  position: absolute;
+  bottom: -0.5rem;
+  font-size: 15px;
+  font-family: Roboto;
+  color: rgb(230, 230, 230);
+  left: 15px;
+  font-weight: 500;
+}
+.img {
+  object-fit: cover;
+  border-radius: 10px;
+}
+@media (min-width: 331px) {
+  .description {
+    font-size: 0.7rem;
+  }
+  .singleContainer {
+    width: 16rem;
+    margin: 5rem 0rem 0 0.5rem;
+  }
+}
+@media (min-width: 374px) {
+  .description {
+    font-size: 13px;
+  }
+  .singleContainer {
+    width: 16rem;
+    margin: 5rem 0rem 0 0.5rem;
+  }
+}
+@media (min-width: 413px) {
+  .longtitle {
+    bottom: 10px;
+    font-size: 1.2rem;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .description {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 1023px) {
+  .description {
+    font-size: 13px;
+  }
+}
