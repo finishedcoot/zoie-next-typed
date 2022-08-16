@@ -3,6 +3,7 @@ import Navbar from "./navigation/Navbar";
 import Footer from "./footer/Footer";
 import SideDrawer from "./navigation/SideDrawer";
 import BackDrop from "../utils/BackDrop";
+import Head from "next/head";
 
 const Layout: React.FC<{
   welcome: boolean;
@@ -19,6 +20,15 @@ const Layout: React.FC<{
 
   return (
     <>
+      <Head>
+        <title>ZOIE</title>
+        <meta
+          name="description"
+          content="ali zoie portfolio made by ardeshir laghai"
+        />
+
+        <link rel="icon" href="/logo-white.svg" />
+      </Head>
       <Navbar welcome={welcome} />
       <SideDrawer
         show={sideDrawerOpen}

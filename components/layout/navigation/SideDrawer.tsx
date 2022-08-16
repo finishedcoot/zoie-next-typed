@@ -20,7 +20,7 @@ const SideDrawer: React.FC<{
       <nav className={drawerClasses.join(" ")}>
         <ul className={styles.side_drawer_link_list}>
           <li>
-            <Link className={styles.side_drawer_links} href="/About">
+            <Link className={styles.side_drawer_links} href="/about">
               About
             </Link>
           </li>
@@ -30,7 +30,7 @@ const SideDrawer: React.FC<{
             </Link>
           </li>
           <li>
-            <Link className={styles.side_drawer_links} href="/Contact">
+            <Link className={styles.side_drawer_links} href="/contact">
               Contact
             </Link>
           </li>

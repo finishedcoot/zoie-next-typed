@@ -27,6 +27,7 @@
   width: 4rem;
   margin-top: 2rem;
   object-fit: cover;
+  cursor: pointer;
 }
 
 .toolbar__logo a {
@@ -57,16 +58,24 @@
 
 .toolbar_navigation_items li {
   padding: 0 0.3rem;
+  font-size: 16px;
+  font-weight: 300;
+  transition: all 10s ease-in-out;
 }
 
 .toolbar_navigation_items a {
   color: white;
   letter-spacing: 2px;
   text-decoration: none;
-  text-shadow: 1px 1px 3px #000000;
+  text-shadow: 1px 1px 4px #000000;
   font-size: 16px;
   font-weight: 300;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    text-shadow: 5px 5px 8px #ffffff;
+  }
 }
+
 .nav::before {
   content: "";
   position: absolute;

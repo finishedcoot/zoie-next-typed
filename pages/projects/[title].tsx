@@ -9,6 +9,7 @@ import MultipleVideoPlayer from "../../components/projectUtils/VideoPlayers/Mult
 import PhotoHeader from "../../components/projectUtils/Photo/PhotoHeader";
 import PhotoContainer from "../../components/projectUtils/Photo/PhotoContainer";
 import Link from "next/link";
+import Head from "next/head";
 
 const prjectPage: NextPage<{ project: ProjectsTypes }> = ({ project }) => {
   let cleanTitle = project.title;
@@ -17,6 +18,26 @@ const prjectPage: NextPage<{ project: ProjectsTypes }> = ({ project }) => {
   }
   return (
     <div>
+      <Head>
+        <title>ZOIE </title>
+        <meta name={`${cleanTitle}`} content={`${cleanTitle} ali zoie`} />
+        <meta
+          name={`${cleanTitle} photos`}
+          content={`${cleanTitle}'s photos`}
+        />
+        <meta
+          name={`${cleanTitle} photos`}
+          content={`${cleanTitle}'s images`}
+        />
+        <meta
+          name={`${cleanTitle} photos`}
+          content={`${cleanTitle}'s photos by ali zoie`}
+        />
+        <meta
+          name={`${cleanTitle} photos`}
+          content={`${cleanTitle}'s images by ali zoie`}
+        />
+      </Head>
       <div className={styles.container}>
         <Link href="/projects">
           <a className={styles.back}>&#8249; Back To Projects</a>

@@ -1,5 +1,7 @@
 import React, { Suspense } from "react";
 import type { NextPage, GetStaticProps } from "next";
+import Head from "next/head";
+
 import data from "../../data/contents.json";
 import Styles from "../../styles/Projects.module.scss";
 import dynamic from "next/dynamic";
@@ -20,6 +22,17 @@ const WorksSlide = dynamic(
 const index: NextPage<{ data: ProjectsTypes[] }> = ({ data }) => {
   return (
     <div>
+      <Head>
+        <title>ZOIE | PROJECTS</title>
+        <meta name="description" content="ali zoie projects - ali zoie works" />
+        {data.map((project, i) => (
+          <meta
+            key={i}
+            name={`${project.title} - ali zoie`}
+            content={`${project.title} - ali zoie`}
+          />
+        ))}
+      </Head>
       <div className={Styles.container}>
         <Suspense
           fallback={

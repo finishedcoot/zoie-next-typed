@@ -38,9 +38,9 @@ const Navbar: React.FC<{
             <li>
               <Link
                 className={`${styles.nav} ${
-                  location.pathname === "/Contact" ? styles.active : ""
+                  location.pathname === "/contact" ? styles.active : ""
                 }`}
-                href="/Contact"
+                href="/contact"
               >
                 Contact
               </Link>
@@ -48,9 +48,9 @@ const Navbar: React.FC<{
             <li>
               <Link
                 className={`${styles.nav} ${
-                  location.pathname === "/About" ? styles.active : ""
+                  location.pathname === "/about" ? styles.active : ""
                 }`}
-                href="/About"
+                href="/about"
               >
                 About
               </Link>
