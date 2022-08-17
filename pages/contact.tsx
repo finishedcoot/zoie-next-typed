@@ -60,7 +60,7 @@ const Contact: NextPage = () => {
   );
 
   return (
-    <div>
+    <div className="fullHeight">
       <Head>
         <title>ZOIE | About</title>
         <meta name="description" content="contact ali zoie - email ali zoie" />

@@ -27,7 +27,6 @@ Router.events.on("routeChangeStart", routeChange);
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   const [firstVisit, setFirstVisit] = useState(false);
-  const [nav, setNav] = useState(false);
 
   useEffect(() => {
     // some browsers (like safari) may require a timeout to delay calling this
@@ -41,14 +40,16 @@ function MyApp({ Component, pageProps, router }: AppProps) {
     if (userFirstVisit !== "True") {
       console.log("use effect loop");
       setFirstVisit(true);
-      sessionStorage.setItem("Has_visited", "True");
-    }
-    setTimeout(() => {
+      setTimeout(() => {
+        setFirstVisit((prev) => (prev = false));
+      }, 4000);
+    } else {
       setFirstVisit(false);
-    }, 4000);
+    }
+    sessionStorage.setItem("Has_visited", "True");
   }, []);
   return (
-    <Layout welcome={nav}>
+    <Layout welcome={firstVisit}>
       <AnimatePresence mode="wait" initial={false}>
         <motion.div
           initial={{ opacity: 0 }}

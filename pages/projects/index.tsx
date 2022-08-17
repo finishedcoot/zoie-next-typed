@@ -25,7 +25,7 @@ const PersonalSlider = dynamic(
 
 const index: NextPage<{ data: ProjectsTypes[] }> = ({ data }) => {
   return (
-    <div style={{ minWidth: "100vh" }}>
+    <div className="fullHeight">
       <Head>
         <title>ZOIE | PROJECTS</title>
         <meta name="description" content="ali zoie projects - ali zoie works" />

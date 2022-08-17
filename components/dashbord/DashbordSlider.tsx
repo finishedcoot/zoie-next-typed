@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from "react";
-import DashbordSlide from "./DashbordSlide";
 import styles from "../../styles/DashbordSlider.module.scss";
 import { DashbordSlidesType } from "../../types/types";
 import { StaticImageData } from "next/image";
+import dynamic from "next/dynamic";
+const DashbordSlide = dynamic(() => import("./DashbordSlide"), {
+  suspense: false,
+  ssr: false,
+});
 
 const DashbordSlider: React.FC<{ Slides: DashbordSlidesType[] }> = ({
   Slides,

@@ -6,7 +6,7 @@ import style from "../styles/AboutPage.module.scss";
 
 const About: NextPage = () => {
   return (
-    <div>
+    <div className="fullHeight">
       <Head>
         <title>ZOIE | About</title>
         <meta
