@@ -23,15 +23,20 @@
   flex: 1;
 }
 
-.homeLogo {
-  width: 4rem;
-  margin-top: 2rem;
-  object-fit: cover;
-  cursor: pointer;
-}
+// .homeLogo {
+//   width: 4rem;
+//   margin-top: 2rem;
+//   object-fit: cover;
+//   cursor: pointer;
+// }
 
-.toolbar__logo a {
+.toolbar__logo {
   text-decoration: none;
+
+  position: relative;
+  margin-top: 60px;
+  margin-left: 4px;
+  cursor: pointer;
 }
 .home_link {
   opacity: 1;

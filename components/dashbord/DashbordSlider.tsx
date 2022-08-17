@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import DashbordSlide from "./DashbordSlide";
 import styles from "../../styles/DashbordSlider.module.scss";
 import { DashbordSlidesType } from "../../types/types";
+import { StaticImageData } from "next/image";
 
 const DashbordSlider: React.FC<{ Slides: DashbordSlidesType[] }> = ({
   Slides,
@@ -44,7 +45,7 @@ const DashbordSlider: React.FC<{ Slides: DashbordSlidesType[] }> = ({
       {slides.map((slide) => (
         <DashbordSlide
           key={slide.title}
-          imageSrc={slide.imageSrc}
+          imageSrc={slide.imageSrc as StaticImageData}
           title={slide.title}
           active={slide.id === current}
         />

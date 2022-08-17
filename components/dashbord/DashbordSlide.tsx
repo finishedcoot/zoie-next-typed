@@ -9,7 +9,6 @@ const DashbordSlide: React.FC<{
   title: string;
   active: boolean;
 }> = ({ imageSrc, title, active }) => {
-  console.log(title);
   return (
     <div
       className={`container relative ${Styles.slideContainer} ${
@@ -21,6 +20,7 @@ const DashbordSlide: React.FC<{
         src={imageSrc}
         objectFit={"cover"}
         objectPosition={"50% 44%"}
+        alt={title}
         quality={100}
       />
       <h1 className={Styles.title}>

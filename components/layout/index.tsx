@@ -1,9 +1,15 @@
 import React, { useState } from "react";
 import Navbar from "./navigation/Navbar";
 import Footer from "./footer/Footer";
-import SideDrawer from "./navigation/SideDrawer";
-import BackDrop from "../utils/BackDrop";
 import Head from "next/head";
+import dynamic from "next/dynamic";
+
+const SideDrawer = dynamic(() => import("./navigation/SideDrawer"), {
+  ssr: false,
+});
+const BackDrop = dynamic(() => import("../utils/BackDrop"), {
+  ssr: false,
+});
 
 const Layout: React.FC<{
   welcome: boolean;
@@ -19,7 +25,7 @@ const Layout: React.FC<{
   };
 
   return (
-    <>
+    <div style={{ position: "relative", overflow: "hidden" }}>
       <Head>
         <title>ZOIE</title>
         <meta
@@ -27,7 +33,7 @@ const Layout: React.FC<{
           content="ali zoie portfolio made by ardeshir laghai"
         />
 
-        <link rel="icon" href="/logo-white.svg" />
+        <link rel="icon" href="/static/media/logo-white.svg" />
       </Head>
       <Navbar welcome={welcome} />
       <SideDrawer
@@ -37,7 +43,7 @@ const Layout: React.FC<{
       {sideDrawerOpen && <BackDrop click={backDropClickHandler} />}
       {children}
       <Footer />
-    </>
+    </div>
   );
 };
 

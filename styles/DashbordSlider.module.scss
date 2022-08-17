@@ -23,7 +23,7 @@
   transition: opacity 0.5s ease-in-out;
   opacity: 0;
   &.rightArrow {
-    right: 1% !important;
+    right: 1.8% !important;
     transform: rotate(180deg);
   }
   &.leftArrow {

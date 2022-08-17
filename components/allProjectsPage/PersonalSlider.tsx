@@ -1,8 +1,14 @@
-import React from "react";
-import PersonalCards from "./PersonalCard";
+import React, { Suspense } from "react";
 import CustomSlider from "../utils/CustomSlider";
 import style from "../../styles/PersonalSlider.module.scss";
 import { ProjectsTypes } from "../../types/types";
+import dynamic from "next/dynamic";
+import Loader from "../utils/Loader";
+
+const PersonalCards = dynamic(() => import("./PersonalCard"), {
+  suspense: true,
+  ssr: false,
+});
 
 const PersonalSlide: React.FC<{ data: ProjectsTypes[] }> = ({ data }) => {
   return (
@@ -13,13 +19,15 @@ const PersonalSlide: React.FC<{ data: ProjectsTypes[] }> = ({ data }) => {
           {data.map((project, i) => {
             return (
               project.type === "personal" && (
-                <PersonalCards
-                  key={i}
-                  index={i}
-                  imgSrc={project.img[0]}
-                  title={project.title}
-                  position={project.coverPostion && project.coverPostion}
-                />
+                <Suspense key={Math.random() * 100} fallback={<Loader />}>
+                  <PersonalCards
+                    key={i}
+                    index={i}
+                    imgSrc={project.img[0]}
+                    title={project.title}
+                    position={project.coverPostion && project.coverPostion}
+                  />
+                </Suspense>
               )
             );
           })}

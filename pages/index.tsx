@@ -29,21 +29,21 @@ export default Home;
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const slides: DashbordSlidesType[] = [
-    { id: 1, title: "QISHM", imageSrc: "/dashbord/1.jpg" },
+    { id: 1, title: "QISHM", imageSrc: "/static/media/dashbord/1.jpg" },
     {
       id: 2,
       title: "BELLE_DE_JOUR",
-      imageSrc: "/dashbord/2.jpg",
+      imageSrc: "/static/media/dashbord/2.jpg",
     },
     {
       id: 3,
       title: "KAN",
-      imageSrc: "/dashbord/3.jpg",
+      imageSrc: "/static/media/dashbord/3.jpg",
     },
     {
       id: 4,
       title: "AVINA",
-      imageSrc: "/dashbord/4.jpg",
+      imageSrc: "/static/media/dashbord/4.jpg",
     },
   ];
   return {

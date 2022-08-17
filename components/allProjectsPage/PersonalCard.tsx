@@ -21,7 +21,7 @@ const PersonalCards: React.FC<{
         position: "relative",
       }}
     >
-      <Link href={`/projects/${title}`}>
+      <Link href={`/projects/${title}`} scroll={false}>
         <div className={styles.modalContainer}>
           <h1 className={styles.title}>{title}</h1>
         </div>

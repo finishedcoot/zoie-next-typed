@@ -41,7 +41,7 @@ const NewSlider: React.FC<{
       setNumberToShow(3);
       return;
     }
-  }, []);
+  }, [type]);
 
   const goNext = () => {
     if (current >= cardsAmount - 1) {

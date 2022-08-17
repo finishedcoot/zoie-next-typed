@@ -24,7 +24,7 @@ const ProjectsCard: React.FC<{
         marginLeft: `${index === 0 ? 0 : ""}`,
       }}
     >
-      <Link href={`/projects/${title}`}>
+      <Link href={`/projects/${title}`} scroll={false}>
         <div className={styles.modalContainer}>
           <h1 className={longTitle === true ? styles.longtitle : styles.title}>
             {cleanTitle}

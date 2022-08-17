@@ -2,6 +2,7 @@ import React from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import styles from "../../../styles/Footer.module.scss";
+import Image from "next/image";
 const Footer: React.FC = () => {
   const location = useRouter();
 
@@ -9,9 +10,7 @@ const Footer: React.FC = () => {
     <div
       className={styles.footer_container}
       style={
-        location.pathname === "/"
-          ? { position: "fixed", backgroundColor: "transparent" }
-          : { position: "relative" }
+        location.pathname === "/" ? { backgroundColor: "transparent" } : {}
       }
     >
       <div className={styles.copy_right}>
@@ -33,10 +32,12 @@ const Footer: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
-            src={"/socialIcons/twitter.svg"}
-            alt="Twitter"
+          <Image
+            src={"/static/media/socialIcons/twitter.svg"}
+            alt="Ali Zoie Twitter"
             className={styles.social_icons}
+            width={24}
+            height={24}
           />
         </a>
         <a
@@ -45,10 +46,12 @@ const Footer: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
-            src={"/socialIcons/instagram.svg"}
-            alt="Instagram"
+          <Image
+            src={"/static/media/socialIcons/instagram.svg"}
+            alt="Ali Zoie Instagram"
             className={styles.social_icons}
+            width={24}
+            height={24}
           />
         </a>
         <a
@@ -57,10 +60,12 @@ const Footer: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
-            src={"/socialIcons/youtube.svg"}
+          <Image
+            src={"/static/media/socialIcons/youtube.svg"}
             className={styles.social_icons}
-            alt="YouTube"
+            alt="Ali Zoie YouTube"
+            width={24}
+            height={24}
           />
         </a>
       </div>

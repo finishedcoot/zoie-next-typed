@@ -1,27 +1,31 @@
 import React, { Suspense } from "react";
 import type { NextPage, GetStaticProps } from "next";
 import Head from "next/head";
-
+import dynamic from "next/dynamic";
 import data from "../../data/contents.json";
 import Styles from "../../styles/Projects.module.scss";
-import dynamic from "next/dynamic";
+
 import { ProjectsTypes } from "../../types/types";
-const PersonalSlide = dynamic(
-  () => import("../../components/allProjectsPage/PersonalSlider"),
-  {
-    suspense: true,
-  }
-);
-const WorksSlide = dynamic(
+import Loader from "../../components/utils/Loader";
+
+const WorksSlider = dynamic(
   () => import("../../components/allProjectsPage/WorkSlider"),
   {
     suspense: true,
+    ssr: false,
+  }
+);
+const PersonalSlider = dynamic(
+  () => import("../../components/allProjectsPage/PersonalSlider"),
+  {
+    suspense: true,
+    ssr: false,
   }
 );
 
 const index: NextPage<{ data: ProjectsTypes[] }> = ({ data }) => {
   return (
-    <div>
+    <div style={{ minWidth: "100vh" }}>
       <Head>
         <title>ZOIE | PROJECTS</title>
         <meta name="description" content="ali zoie projects - ali zoie works" />
@@ -34,29 +38,11 @@ const index: NextPage<{ data: ProjectsTypes[] }> = ({ data }) => {
         ))}
       </Head>
       <div className={Styles.container}>
-        <Suspense
-          fallback={
-            <div className="lds-ring">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-          }
-        >
-          <PersonalSlide data={data} />
+        <Suspense fallback={<Loader />}>
+          <PersonalSlider data={data} />
         </Suspense>
-        <Suspense
-          fallback={
-            <div className="lds-ring">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-          }
-        >
-          <WorksSlide data={data} />
+        <Suspense fallback={<Loader />}>
+          <WorksSlider data={data} />
         </Suspense>
       </div>
     </div>

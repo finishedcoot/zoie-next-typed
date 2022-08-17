@@ -1,13 +1,10 @@
 import React from "react";
 import styles from "../../styles/WorksSlider.module.scss";
 import { ProjectsTypes } from "../../types/types";
-
 import WorksCard from "./WorksCard";
 import CustomSlider from "../utils/CustomSlider";
 
-import data from "../../data/contents.json";
-
-const WorksSlider: React.FC<{ data: ProjectsTypes[] }> = () => {
+const WorksSlider: React.FC<{ data: ProjectsTypes[] }> = ({ data }) => {
   const fashionProjects: ProjectsTypes[] = [];
   const commercialProjects: ProjectsTypes[] = [];
   const advertismentProjects: ProjectsTypes[] = [];
