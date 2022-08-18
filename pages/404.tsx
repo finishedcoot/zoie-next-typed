@@ -2,8 +2,6 @@ import React from "react";
 import Head from "next/head";
 import type { NextPage } from "next";
 
-import style from "../styles/AboutPage.module.scss";
-
 const custom404: NextPage = () => {
   return (
     <div className="fullHeight">
@@ -12,7 +10,7 @@ const custom404: NextPage = () => {
         <meta name="description" content="ali zoie - page not found" />
       </Head>
       <div className={"centeredTextContainer"}>
-        <h1>404 | SORRY THE PAGE YOU'RE LOOKING FOR IS NOT AVAILABLE</h1>
+        <h1>404 | SORRY THE PAGE YOU&#39RE LOOKING FOR IS NOT AVAILABLE</h1>
       </div>
     </div>
   );
