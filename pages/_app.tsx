@@ -55,6 +55,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
+          transition={{ duration: 1.2, ease: [0.43, 0.13, 0.23, 0.96] }}
           key={router.route}
         >
           <Component

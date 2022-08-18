@@ -19,18 +19,10 @@ const Navbar: React.FC<{
             href="/"
             scroll={false}
           >
-            <a
-              style={{
-                position: "relative",
-                width: "100px",
-                height: "70px",
-                display: "block",
-              }}
-            >
+            <a className={styles.logoContainer}>
               <Image
                 layout="fill"
                 objectFit="contain"
-                className={styles.homeLogo}
                 src={Logo}
                 alt="zoie-logo"
               />

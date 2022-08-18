@@ -11,7 +11,7 @@
   padding: 0;
   box-sizing: border-box;
   right: 1rem;
-  top: 1rem;
+  top: 2.8rem;
   z-index: 400;
 }
 @media (min-width: 769px) {
@@ -56,4 +56,10 @@
 }
 .toggle_button.open .toggle_button_line::after {
   transform: rotate(-45deg);
+}
+
+@media (max-width: 378px) {
+  .toggle_button {
+    top: 2.2rem;
+  }
 }

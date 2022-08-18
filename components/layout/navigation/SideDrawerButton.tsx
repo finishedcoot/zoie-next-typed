@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../../styles/DrawerToggleButton.module.scss";
+import styles from "../../../styles/SideDrawerToggleButton.module.scss";
 
 const DrawerToggleButton: React.FC<{ show: boolean; click: () => void }> = ({
   show = false,

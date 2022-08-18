@@ -48,7 +48,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2;
+  z-index: 400;
   .dot {
     width: 20px;
     height: 20px;
@@ -64,5 +64,12 @@
     &.activeDot {
       background-color: black;
     }
+  }
+}
+
+@media (max-width: 769px) {
+  .arrowButton {
+    width: 20px;
+    height: 20px;
   }
 }
