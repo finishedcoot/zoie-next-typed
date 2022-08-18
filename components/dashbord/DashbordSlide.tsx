@@ -21,7 +21,7 @@ const DashbordSlide: React.FC<{
         objectFit={"cover"}
         objectPosition={"50% 44%"}
         alt={title}
-        quality={100}
+        quality={window.innerWidth > 1023 ? 100 : 70}
       />
       <h1 className={Styles.title}>
         <Link href={`/projects/${title}`}>

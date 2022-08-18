@@ -31,7 +31,6 @@ const PersonalCards: React.FC<{
         blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
         alt={title}
         layout={"fill"}
-        quality={100}
         className={styles.img}
         objectPosition={`20% ${position || "50%"}`}
         src={imgSrc}

@@ -42,7 +42,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     },
     {
       id: 4,
-      title: "AVINA",
+      title: "THE_DREAM",
       imageSrc: "/static/media/dashbord/4.jpg",
     },
   ];

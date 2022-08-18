@@ -38,7 +38,6 @@ const ProjectsCard: React.FC<{
         className={styles.img}
         src={imgSrc}
         layout={"fill"}
-        quality={100}
       />
     </div>
   );

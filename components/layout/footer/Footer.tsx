@@ -14,11 +14,13 @@ const Footer: React.FC = () => {
       }
     >
       <div className={styles.copy_right}>
+        <span>Copyright 2022 Ali Zoie |</span>
         <span>
-          Copyright 2021 Ali Zoie | All Rights Reserved |
           <Link className={styles.footer_links} href={"/"}>
-            Terms of Usea
+            Terms of Use
           </Link>
+        </span>
+        <span>
           <Link className={styles.footer_links} href={"/"}>
             Privacy Policy
           </Link>
@@ -27,46 +29,46 @@ const Footer: React.FC = () => {
       <div className={styles.spacer}></div>
       <div className={styles.social_media}>
         <a
-          className={styles.footer_links}
+          className={styles.social_links}
           href={"https://Twitter.com/alizoie"}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            src={"/static/media/socialIcons/twitter.svg"}
-            alt="Ali Zoie Twitter"
-            className={styles.social_icons}
-            width={24}
-            height={24}
-          />
+          <div className={styles.social_icons}>
+            <Image
+              src={"/static/media/socialIcons/twitter.svg"}
+              alt="Ali Zoie Twitter"
+              layout="fill"
+            />
+          </div>
         </a>
         <a
-          className={styles.footer_links}
+          className={styles.social_links}
           href={"https://Instagram.com/mazoie"}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            src={"/static/media/socialIcons/instagram.svg"}
-            alt="Ali Zoie Instagram"
-            className={styles.social_icons}
-            width={24}
-            height={24}
-          />
+          <div className={styles.social_icons}>
+            <Image
+              src={"/static/media/socialIcons/instagram.svg"}
+              alt="Ali Zoie Instagram"
+              layout="fill"
+            />
+          </div>
         </a>
         <a
-          className={styles.footer_links}
+          className={styles.social_links}
           href={"https://m.youtube.com/channel/UCvTvggm7hfqMp_j05OfBNpQ"}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            src={"/static/media/socialIcons/youtube.svg"}
-            className={styles.social_icons}
-            alt="Ali Zoie YouTube"
-            width={24}
-            height={24}
-          />
+          <div className={styles.social_icons}>
+            <Image
+              src={"/static/media/socialIcons/youtube.svg"}
+              alt="Ali Zoie YouTube"
+              layout="fill"
+            />
+          </div>
         </a>
       </div>
     </div>
