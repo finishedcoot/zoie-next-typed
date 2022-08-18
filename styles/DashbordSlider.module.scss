@@ -1,4 +1,5 @@
 .sliderContainer {
+  max-height: 100vh;
   position: relative;
   &:hover .arrowButton {
     opacity: 0.5;

@@ -36,7 +36,7 @@ const prjectPage: NextPage<{ project: ProjectsTypes }> = ({ project }) => {
     cleanTitle = cleanTitle.replaceAll("_", " ");
   }
   return (
-    <div className="fullHeight">
+    <div className="fullHeight" style={{ marginBottom: 60 }}>
       <Head>
         <title>ZOIE </title>
         <meta name={`${cleanTitle}`} content={`${cleanTitle} ali zoie`} />
