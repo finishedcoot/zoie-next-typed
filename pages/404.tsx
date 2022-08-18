@@ -4,21 +4,18 @@ import type { NextPage } from "next";
 
 import style from "../styles/AboutPage.module.scss";
 
-const About: NextPage = () => {
+const custom404: NextPage = () => {
   return (
     <div className="fullHeight">
       <Head>
-        <title>ZOIE | About</title>
-        <meta
-          name="description"
-          content="about ali zoie - ali zoie information"
-        />
+        <title>ZOIE | 404</title>
+        <meta name="description" content="ali zoie - page not found" />
       </Head>
       <div className={"centeredTextContainer"}>
-        <h1>MORE INFO WILL BE ADDED SOON</h1>
+        <h1>404 | SORRY THE PAGE YOU'RE LOOKING FOR IS NOT AVAILABLE</h1>
       </div>
     </div>
   );
 };
 
-export default About;
+export default custom404;

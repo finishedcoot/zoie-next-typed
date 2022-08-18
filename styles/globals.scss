@@ -66,6 +66,20 @@ a {
   position: relative;
 }
 
+.centeredTextContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    color: white;
+    letter-spacing: 2px;
+    font-size: 18px;
+    font-weight: 300;
+  }
+}
+
 // Loading
 .lds-ring {
   display: inline-block;
