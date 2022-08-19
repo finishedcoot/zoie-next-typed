@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Styles from "../../styles/DashbordSlide.module.scss";
+import { motion } from "framer-motion";
 
 const DashbordSlide: React.FC<{
   imageSrc: StaticImageData;
@@ -13,7 +14,12 @@ const DashbordSlide: React.FC<{
   onTouchEnd: (e: React.TouchEvent) => void;
 }> = ({ imageSrc, title, active, onTouchStart, onTouchEnd, onTouchMove }) => {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1, ease: [0.43, 0.13, 0.23, 0.96] }}
+      key={title}
       className={`container relative ${Styles.slideContainer} ${
         active && Styles.active
       }`}
@@ -34,7 +40,7 @@ const DashbordSlide: React.FC<{
           <span>{title.replaceAll("_", " ")}</span>
         </Link>
       </h1>
-    </div>
+    </motion.div>
   );
 };
 

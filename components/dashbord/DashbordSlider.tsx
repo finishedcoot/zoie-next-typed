@@ -3,6 +3,7 @@ import styles from "../../styles/DashbordSlider.module.scss";
 import { DashbordSlidesType } from "../../types/types";
 import { StaticImageData } from "next/image";
 import dynamic from "next/dynamic";
+import { AnimatePresence } from "framer-motion";
 const DashbordSlide = dynamic(() => import("./DashbordSlide"), {
   suspense: false,
   ssr: false,
@@ -89,17 +90,24 @@ const DashbordSlider: React.FC<{ Slides: DashbordSlidesType[] }> = ({
         className={`${styles.arrowButton} ${styles.leftArrow}`}
         onClick={goPrev}
       ></button>
-      {slides.map((slide) => (
-        <DashbordSlide
-          key={slide.title}
-          imageSrc={slide.imageSrc as StaticImageData}
-          title={slide.title}
-          active={slide.id === current}
-          onTouchStart={touchStart}
-          onTouchMove={touchMeasure}
-          onTouchEnd={touchEnded}
-        />
-      ))}
+      <AnimatePresence mode="wait">
+        {slides.map((slide) => {
+          if (slide.id === current) {
+            return (
+              <DashbordSlide
+                key={slide.title}
+                imageSrc={slide.imageSrc as StaticImageData}
+                title={slide.title}
+                active={slide.id === current}
+                onTouchStart={touchStart}
+                onTouchMove={touchMeasure}
+                onTouchEnd={touchEnded}
+              />
+            );
+          }
+        })}
+      </AnimatePresence>
+
       <button
         className={`${styles.arrowButton} ${styles.rightArrow}`}
         onClick={goNext}
