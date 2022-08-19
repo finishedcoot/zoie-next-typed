@@ -5,7 +5,6 @@
   height: 2.5rem;
   display: flex;
   padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
   flex-direction: row;
   z-index: 300;
   background-color: rgba(12, 12, 12, 0);
@@ -16,12 +15,15 @@
 .social_links {
   height: 100%;
   width: auto;
+  z-index: 500;
+  padding-bottom: 0.5rem;
 }
 .social_icons {
   position: relative;
   height: 100%;
   width: 30px;
   margin: 0 3px;
+  z-index: 500;
 }
 
 .social_media {
@@ -29,6 +31,7 @@
   height: 100%;
   display: flex;
   align-items: center;
+  z-index: 500;
 }
 .spacer {
   flex: 1;

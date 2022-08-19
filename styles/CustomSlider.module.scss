@@ -7,13 +7,12 @@
   }
 }
 .singleCard {
-  --_spacer: 10px;
   width: 100vw;
   display: grid;
   gap: 50px;
   grid-auto-flow: column;
   grid-auto-columns: 100%;
-  padding: 10px 100px;
+  padding: 10px 120px;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
   scroll-behavior: smooth;
@@ -41,11 +40,11 @@
   transition: opacity 0.5s ease-in-out;
   opacity: 0;
   &.rightArrow {
-    right: 4.2% !important;
+    right: 5.5% !important;
     transform: rotate(180deg);
   }
   &.leftArrow {
-    left: 4.2% !important;
+    left: 5.5% !important;
   }
 
   .arrow {
@@ -59,8 +58,8 @@
 }
 
 .multipleCard {
-  --_spacer: 10px;
-  width: 100vw;
+  width: 85vw;
+  margin: auto;
   display: grid;
   gap: 5px;
   grid-auto-flow: column;
@@ -106,7 +105,6 @@
     grid-auto-columns: 70%;
   }
   .unfilledSlider {
-    --_spacer: 10px;
     width: 100vw;
     display: grid;
     gap: 5px;
@@ -122,32 +120,38 @@
 }
 
 @media (max-width: 1210px) {
-  .rightArrow {
-    right: 6%;
-  }
-  .leftArrow {
-    left: 6%;
+  .arrowButton {
+    &.rightArrow {
+      right: 7.3% !important;
+    }
+    &.leftArrow {
+      left: 7.3% !important;
+    }
   }
 }
 
 @media (max-width: 1024px) {
-  .rightArrow {
-    right: 7.5%;
-  }
-  .leftArrow {
-    left: 7.5%;
+  .arrowButton {
+    &.rightArrow {
+      right: 8.8% !important;
+    }
+    &.leftArrow {
+      left: 8.8% !important;
+    }
   }
 }
 @media (max-width: 765px) {
-  .rightArrow {
-    right: 10%;
-  }
-  .leftArrow {
-    left: 10%;
+  .arrowButton {
+    &.rightArrow {
+      right: 11.3% !important;
+    }
+    &.leftArrow {
+      left: 11.3% !important;
+    }
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 721px) {
   .rightArrow {
     display: none;
   }

@@ -26,6 +26,7 @@
   );
 
   transition: opacity 0.3s ease-in;
+  display: none;
 }
 .cardContainer:hover .modalContainer {
   opacity: 1;
@@ -68,6 +69,11 @@
   }
   .cardContainer {
     height: 20rem;
+  }
+}
+@media (min-width: 413px) {
+  .modalContainer {
+    display: block;
   }
 }
 @media (min-width: 767px) {

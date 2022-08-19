@@ -8,12 +8,18 @@ const DashbordSlide: React.FC<{
   imageSrc: StaticImageData;
   title: string;
   active: boolean;
-}> = ({ imageSrc, title, active }) => {
+  onTouchStart: (e: React.TouchEvent) => void;
+  onTouchMove: (e: React.TouchEvent) => void;
+  onTouchEnd: (e: React.TouchEvent) => void;
+}> = ({ imageSrc, title, active, onTouchStart, onTouchEnd, onTouchMove }) => {
   return (
     <div
       className={`container relative ${Styles.slideContainer} ${
         active && Styles.active
       }`}
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
     >
       <Image
         layout="fill"

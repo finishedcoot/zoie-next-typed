@@ -79,16 +79,12 @@ const DashbordSlider: React.FC<{ Slides: DashbordSlidesType[] }> = ({
       goNext();
       setTouchInitialXPos(0);
       setTouchPosDiffrence(0);
+      return;
     }
   };
 
   return (
-    <div
-      className={`fullScreen ${styles.sliderContainer}`}
-      onTouchStart={touchStart}
-      onTouchMove={touchMeasure}
-      onTouchEnd={touchEnded}
-    >
+    <div className={`fullScreen ${styles.sliderContainer}`}>
       <button
         className={`${styles.arrowButton} ${styles.leftArrow}`}
         onClick={goPrev}
@@ -99,6 +95,9 @@ const DashbordSlider: React.FC<{ Slides: DashbordSlidesType[] }> = ({
           imageSrc={slide.imageSrc as StaticImageData}
           title={slide.title}
           active={slide.id === current}
+          onTouchStart={touchStart}
+          onTouchMove={touchMeasure}
+          onTouchEnd={touchEnded}
         />
       ))}
       <button

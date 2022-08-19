@@ -9,7 +9,7 @@ const Home: NextPage<{ firstVisit: boolean; slides: DashbordSlidesType[] }> = ({
   slides,
 }) => {
   return (
-    <div>
+    <div style={{ overflow: "hidden" }}>
       <Head>
         <title>ZOIE</title>
         <meta
