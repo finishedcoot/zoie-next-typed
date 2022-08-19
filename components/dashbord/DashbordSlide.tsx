@@ -28,6 +28,7 @@ const DashbordSlide: React.FC<{
       onTouchEnd={onTouchEnd}
     >
       <Image
+        priority={true}
         layout="fill"
         src={imageSrc}
         objectFit={"cover"}
