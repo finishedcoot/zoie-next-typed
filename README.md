@@ -1,3 +1,19 @@
+### Zoie website rebuild with Next.js and TypeScript
+This is an improvement on on of my earlier projects, it is a platform made for on of my talented friends.
+
+Improved it by Next.js SSG and TypeScript type checking, the result is extremely faster and smoother.
+
+CRA: [Zoie](https://alizoie.com) hosted on aws
+
+Next.js: [Zoie-Next](https://zoie-next-typed.vercel.app/) hosted on vercel
+
+Used Tech:
+-Next.js
+-TypeScript
+-SASS
+-Framer-motion
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
