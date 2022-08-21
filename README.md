@@ -8,10 +8,10 @@ CRA: [Zoie](https://alizoie.com) hosted on aws
 Next.js: [Zoie-Next](https://zoie-next-typed.vercel.app/) hosted on vercel
 
 Used Tech:
--Next.js
--TypeScript
--SASS
--Framer-motion
+- Next.js
+- TypeScript
+- SASS
+- Framer-motion
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
